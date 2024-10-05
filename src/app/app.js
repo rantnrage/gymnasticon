@@ -141,7 +141,7 @@ export class App {
     this.crank.revolutions++;
     let {power, crank, wheel, cadence} = this;
     this.logger.log(`pedal stroke [timestamp=${timestamp} revolutions=${crank.revolutions} cadence=${cadence}rpm power=${power}W]`);
-    //this.server.updateMeasurement({ power, crank, wheel });
+    this.server.updateMeasurement({ power, crank, wheel });
     this.antServer.updateMeasurement({ power, cadence, crank });
   }
 
@@ -151,7 +151,7 @@ export class App {
     this.wheel.revolutions++;
     let {power, crank, wheel, cadence} = this;
     this.logger.log(`wheel rotation [timestamp=${timestamp} revolutions=${wheel.revolutions} speed=${this.wheelSimulation.speed}km/h power=${power}W]`);
-    //this.server.updateMeasurement({ power, crank, wheel });
+    this.server.updateMeasurement({ power, crank, wheel });
     this.antServer.updateMeasurement({ power, cadence, wheel });
   }
 
