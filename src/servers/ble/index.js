@@ -17,7 +17,7 @@ export class GymnasticonServer extends BleServer {
   constructor(bleno, name=DEFAULT_NAME) {
     super(bleno, name, [
       new CyclingPowerService(),
-      //new CyclingSpeedAndCadenceService(),
+      new CyclingSpeedAndCadenceService(),
     ])
   }
 
