@@ -7,6 +7,7 @@ export const DEFAULT_NAME = 'Gymnasticon';
 /**
  * Handles communication with apps (e.g. Zwift) using the standard Bluetooth
  * LE GATT Cycling Power Service.
+ *
  */
 export class GymnasticonServer extends BleServer {
 	/**
